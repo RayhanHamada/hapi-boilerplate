@@ -1,3 +1,5 @@
+const books = require('./books');
+
 /**
  * @type {import('@hapi/hapi').ServerRoute[]} Routes
  */

@@ -1,11 +1,12 @@
 const hapi = require('@hapi/hapi');
+const routes = require('./routes');
 
 async function main() {
   const server = new hapi.Server({
-    port: 3000,
+    port: 5000,
     routes: {
       cors: {
-        origin: '*',
+        origin: ['*'],
       },
     },
   });
@@ -16,3 +17,5 @@ async function main() {
     console.log(`Server Listening On Port ${server.info.port}`);
   });
 }
+
+main();
