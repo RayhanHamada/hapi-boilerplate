@@ -1,3 +1,5 @@
+const books = require('./books');
+
 /**
  * @typedef {import('@hapi/hapi').Lifecycle.Method} Handler
  */

@@ -1,4 +1,10 @@
-const books = require('./books');
+const {
+  AddBookHandler,
+  GetBookByIdHandler,
+  EditBookByIdHandler,
+  DeleteBookByIdHandler,
+  GetAllBooksHandler,
+} = require('./routeHandler');
 
 /**
  * @type {import('@hapi/hapi').ServerRoute[]} Routes
@@ -7,26 +13,26 @@ module.exports = [
   {
     method: 'GET',
     path: '/books',
-    handler: (request, reply) => {},
+    handler: GetAllBooksHandler,
   },
   {
     method: 'GET',
     path: '/books/{bookId}',
-    handler: (request, reply) => {},
+    handler: GetBookByIdHandler,
   },
   {
     method: 'POST',
     path: '/books',
-    handler: (request, reply) => {},
+    handler: AddBookHandler,
   },
   {
     method: 'PUT',
     path: '/books/{bookId}',
-    handler: (request, reply) => {},
+    handler: EditBookByIdHandler,
   },
   {
     method: 'DELETE',
     path: '/books/{bookId}',
-    handler: (request, reply) => {},
+    handler: DeleteBookByIdHandler,
   },
 ];
